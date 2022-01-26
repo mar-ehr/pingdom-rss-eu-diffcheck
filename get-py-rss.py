@@ -12,8 +12,8 @@ timestamp_str_today = dTobj.strftime("%Y-%m-%d")
 ydTobj = datetime.now() - timedelta(days=1)
 timestamp_str_yesterday = ydTobj.strftime("%Y-%m-%d")
 
-filename_today = "pingdom-EU_" + timestamp_str_today + ".txt"
-filename_yesterday = "pingdom-EU_" +  timestamp_str_yesterday + ".txt"
+filename_today = "/usr/local/bin/py-rss/rss/pingdom-EU_" + timestamp_str_today + ".txt"
+filename_yesterday = "/usr/local/bin/py-rss/rss/pingdom-EU_" +  timestamp_str_yesterday + ".txt"
 
 print("")
 print("===== py-rss -> get daily rss file ======================")

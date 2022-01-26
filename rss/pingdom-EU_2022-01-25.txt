@@ -1,17 +1,13 @@
 2022-01-26
 
 =====
-Frankfurt 2, Germany (New)
-178.162.206.244
-s4086.pingdom.com
+London 1337, INU
+212.78.13.37
+s1337.pingdom.com
 =====
-Milan 4, Italy
-159.122.168.9
-s4085.pingdom.com
-=====
-Ilmenau 12, DE
-13.37.133.37
-s4037.pingdom.com
+London 4, UK
+212.78.83.16
+s4081.pingdom.com
 =====
 Bratislava, Slovakia
 196.245.151.42

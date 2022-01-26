@@ -1,0 +1,47 @@
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+
+SHELL=/bin/sh
+# You can also override PATH, but by default, newer versions inherit it from the environment
+#PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name command to be executed
+17 *	* * *	root    cd / && run-parts --report /etc/cron.hourly
+25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+#
+#
+# py-rss section experimental
+
+43 16	* * *	root	/usr/local/bin/py-rss/py-rss-cleanup.sh > /tmp/py-rss-log/py-rss-cleanup.log
+
+
+#33 15	* * *	root	python3 /usr/local/bin/py-rss/py-rss-get.py > /tmp/py-rss-get-pm.log
+#34 15	* * *	root	python3 /usr/local/bin/py-rss/py-rss-check.py > /tmp/py-rss-get-pm.log
+
+# py-rss section prod 
+
+
+#25 7	* * *
+#25 15	* * *
+#27 7	* * *
+#27 15	* * *	root	/usr/local/bin/py-rss/py-rss-cleanup.sh > /tmp/py-rss-log/py-rss-cleanup.log
+#30 7	* * *	root	python3 /usr/local/bin/py-rss/py-rss-get.py > /tmp/py-rss-log/py-rss-get-am.log
+#30 15	* * *	root	python3 /usr/local/bin/py-rss/py-rss-get.py > /tmp/py-rss-log/py-rss-get-pm.log 
+#40 7	* * *	root	python3 /usr/local/bin/py-rss/py-rss-check.py > /tmp/py-rss-log/py-rss-check-am.log 
+#40 15	* * *	root	python3 /usr/local/bin/py-rss/py-rss-check.py > /tmp/py-rss-log/py-rss-check-pm.log 
+
+
+
+

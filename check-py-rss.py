@@ -12,9 +12,9 @@ timestamp_str_today = dTobj.strftime("%Y-%m-%d")
 ydTobj = datetime.now() - timedelta(days=1)
 timestamp_str_yesterday = ydTobj.strftime("%Y-%m-%d")
 
-filename_today = "/usr/local/bin/py-rss/pingdom-EU_" + timestamp_str_today + ".txt"
-filename_yesterday = "/usr/local/bin/py-rss/pingdom-EU_" + timestamp_str_yesterday + ".txt"
-filename_res_today = "/usr/local/bin/py-rss/diffcheck-result_" + timestamp_str_today + ".txt"
+filename_today = "/usr/local/bin/py-rss/rss/pingdom-EU_" + timestamp_str_today + ".txt"
+filename_yesterday = "/usr/local/bin/py-rss/rss/pingdom-EU_" + timestamp_str_yesterday + ".txt"
+filename_res_today = "/usr/local/bin/py-rss/results/diffcheck-result_" + timestamp_str_today + ".txt"
 
 file_res_today = open(filename_res_today, "w")
 
