@@ -7,14 +7,14 @@ from difflib import *
 from datetime import datetime, timedelta
 
 dTobj = datetime.now()
-timestamp_str_today = dTobj.strftime("%Y%m%d")
+timestamp_str_today = dTobj.strftime("%Y-%m-%d")
 
 ydTobj = datetime.now() - timedelta(days=1)
-timestamp_str_yesterday = ydTobj.strftime("%Y%m%d")
+timestamp_str_yesterday = ydTobj.strftime("%Y-%m-%d")
 
-filename_today = "/usr/local/bin/py-rss/" + timestamp_str_today + "_pingdom-EU.txt"
-filename_yesterday = "/usr/local/bin/py-rss/" + timestamp_str_yesterday + "_pingdom-EU.txt"
-filename_res_today = "/usr/local/bin/py-rss/" + timestamp_str_today + "_diffcheck-result.txt"
+filename_today = "/usr/local/bin/py-rss/pingdom-EU_" + timestamp_str_today + ".txt"
+filename_yesterday = "/usr/local/bin/py-rss/pingdom-EU_" + timestamp_str_yesterday + ".txt"
+filename_res_today = "/usr/local/bin/py-rss/diffcheck-result_" + timestamp_str_today + ".txt"
 
 file_res_today = open(filename_res_today, "w")
 

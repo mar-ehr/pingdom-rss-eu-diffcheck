@@ -7,13 +7,13 @@ from difflib import *
 from datetime import datetime, timedelta
 
 dTobj = datetime.now()
-timestamp_str_today = dTobj.strftime("%Y%m%d")
+timestamp_str_today = dTobj.strftime("%Y-%m-%d")
 
 ydTobj = datetime.now() - timedelta(days=1)
-timestamp_str_yesterday = ydTobj.strftime("%Y%m%d")
+timestamp_str_yesterday = ydTobj.strftime("%Y-%m-%d")
 
-filename_today = timestamp_str_today + "_pingdom-EU.txt"
-filename_yesterday = timestamp_str_yesterday + "_pingdom-EU.txt"
+filename_today = "pingdom-EU_" + timestamp_str_today + ".txt"
+filename_yesterday = "pingdom-EU_" +  timestamp_str_yesterday + ".txt"
 
 print("")
 print("===== py-rss -> get daily rss file ======================")

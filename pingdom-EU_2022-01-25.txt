@@ -1,4 +1,4 @@
-20220126
+2022-01-26
 
 =====
 Frankfurt 2, Germany (New)
@@ -9,13 +9,9 @@ Milan 4, Italy
 159.122.168.9
 s4085.pingdom.com
 =====
-London 5, UK
-212.78.83.12
-s4082.pingdom.com
-=====
-London 4, UK
-212.78.83.16
-s4081.pingdom.com
+Ilmenau 12, DE
+13.37.133.37
+s4037.pingdom.com
 =====
 Bratislava, Slovakia
 196.245.151.42
