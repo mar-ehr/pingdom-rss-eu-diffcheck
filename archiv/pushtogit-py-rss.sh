@@ -9,8 +9,6 @@ GIT=`which git`
 REPO_DIR=/usr/local/bin/py-rss/
 
 cd ${REPO_DIR}
-mkdir /usr/local/bin/cronjobtest
-
 
 echo ""
 echo "automatic git add, commit & push @ ${DATELOG}"
