@@ -30,7 +30,7 @@ with open(filename_today) as f, open(filename_yesterday) as g:
         glines = g.readlines()
 
         d = difflib.Differ()
-        diff = d.compare(flines, glines)
+        diff = d.compare(glines, flines)
         #print("\n".join(diff))
         res1 = ("\n".join(diff))
         file_res_today.write("\n" + res1)
